@@ -1,0 +1,11 @@
+services:
+  api:
+    # Constrói a imagem a partir do Dockerfile no diretório atual (.)
+    build: .
+    container_name: imersaodevops
+    ports:
+      # Mapeia a porta 8000 do seu computador para a porta 8000 do contêiner
+      - "8000:8000"
+    volumes:
+      # Monta o diretório atual no contêiner para que o --reload funcione
+      - .:/app
